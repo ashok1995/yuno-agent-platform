@@ -22,17 +22,6 @@ A **local-first multi-agent platform** built for the [Yuno AI Engineer Hiring Ch
 | **Single setup command** | `./start.sh` |
 | **Documentation** | This README — architecture, setup, extension guide |
 
-### Submission checklist (you still need to record)
-
-| Deliverable | Status |
-|-------------|--------|
-| Working Git repository | ✅ |
-| README (architecture + setup + justification) | ✅ |
-| **Demo video or GIF** (web + Telegram conversation) | ⬜ **Record & attach** |
-| **Live demo session** with Yuno team | ⬜ **Schedule** |
-
-**Evaluation weights (from assignment):** end-to-end demo 40% · architecture/code 30% · UI/UX 20% · documentation 10%.
-
 ---
 
 ## Quick start (single command)
@@ -121,14 +110,6 @@ Open http://localhost:8501. Main tabs:
 | **Agent Profiles** | Create / edit / delete agents (all 10+ config fields) |
 | **Workflow Builder** | Load built-in template, modify graph, save custom workflow |
 | **Persisted messages** | Full inter-agent message log from SQLite |
-
-### Suggested demo flow (for video)
-
-1. **Agent CRUD** — create a custom agent (e.g. Finance Analyst), set system prompt + tools + channels.
-2. **Finance workflow** — `1000 invested at 5% annual return — what after 5 years?` → FV ≈ **$1,276.28**
-3. **Code review + feedback loop** — `Audit: def run(): return eval(input())` → security scan → CRITICAL → router re-plans
-4. **Multi-turn trip** — Turn 1: `Plan a 3-day trip to Dharamshala` → Turn 2: `Add paragliding on day 2` (same conversation)
-5. **Telegram** — repeat greeting + trip in the bot; show it remembers context within the chat
 
 ### Example prompts
 
@@ -397,7 +378,7 @@ yuno-agent-platform/
 
 ---
 
-## Known limitations (discuss in live demo)
+## Known limitations
 
 | Topic | Reality |
 |-------|---------|
@@ -406,15 +387,6 @@ yuno-agent-platform/
 | Auto-router | Classifier dispatches to built-in subgraphs; fully custom graphs run when explicitly selected/saved |
 | Telegram | Requires valid bot token + Ollama running; first LLM call may take 10–30s on cold start |
 | Model dependency | Quality and speed depend on locally installed Ollama model |
-
----
-
-## Recording your demo (Mac)
-
-1. **⌘ + Shift + 5** → Record Selected Portion or Entire Screen.
-2. Record **web**: agent CRUD → finance task → code review → multi-turn trip with conversation panel.
-3. Record **Telegram**: `/start`, greeting, trip plan in the same chat.
-4. Export as MP4 or GIF and attach to your submission.
 
 ---
 
